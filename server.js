@@ -40,10 +40,25 @@
 
     var convertArray2 = convertArray1.toString().split('/');
 
-    var convertArray3 = convertArray2.toString().split(',');
+    //var convertArray3 = convertArray2.toString().split(',');
    
-   console.log(convertArray3);
+for(let i = 0; i < convertArray2.length; i++) {
+	 var array3 = convertArray2[i].toString().split(',');
 
+	 // var espera = array3;
+
+	   var sum1 = array3[0] * convertArray2.length;
+	   var sum2 = array3[1] * convertArray2.length;
+	   var sum3 = array3[2] * convertArray2.length;
+	   var sum4 = array3[3] * convertArray2.length;
+	   var sum5 = array3[4] * convertArray2.length;
+	   var sum6 = array3[5] * convertArray2.length;
+	   var sum7 = array3[6] * convertArray2.length;
+
+	    console.log(sum1.toFixed(2));
+	
+  }
+	 
 //requisição a api da braspress
 
    let data = {"cnpjRemetente":42718567000148, 
@@ -51,12 +66,12 @@
    "modal":"R","tipoFrete":"1", 
    "cepOrigem":dadoTray.cep, 
     "cepDestino":dadoTray.cep_destino, 
-    "vlrMercadoria":convertArray3[7], 
-    "peso":convertArray3[5],"volumes":convertArray3[4], 
-    "cubagem":[{"altura":convertArray3[2], 
-    "largura":convertArray3[1], 
-    "comprimento":convertArray3[0], 
-    "volumes":convertArray3[4]}]} 
+    "vlrMercadoria":sum7, 
+    "peso":sum5,"volumes":sum4, 
+    "cubagem":[{"altura":sum2, 
+    "largura":sum3, 
+    "comprimento":sum1, 
+    "volumes":sum4}]} 
           
            var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
             var response = await fetch('https://api.braspress.com/v1/cotacao/calcular/json', { 
@@ -113,50 +128,4 @@
 
 
  
-/* 
- function braspress(cep) { 
-   let data = {"cnpjRemetente":60701190000104, 
-     "cnpjDestinatario":30539356867, 
-     "modal":"R","tipoFrete":"1", 
-      "cepOrigem":2323000, 
-      "cepDestino":cep, 
-      "vlrMercadoria":100.00, 
-      "peso":50.55,"volumes":10, 
-      "cubagem":[{"altura":0.46, 
-      "largura":0.67, 
-      "comprimento":0.67, 
-      "volumes":10}]} 
-			
-			 var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
-				 fetch('https://api.braspress.com/v1/cotacao/calcular/json', { 
-				  method: "POST", 
-				  body: JSON.stringify(data), 
-				  headers: {"Content-type": "application/json; charset=UTF-8", 
-				      'Authorization': 'Basic ' + authorizationBasic, 
-				  } 
-				 }) 
-			 .then(response => response.json()) 
-			 .then(result => {
-                console.log('ENVIADO', result)
-            }) 
-			 .catch(err => console.log(err)); 
 
- }  */
- 
-
-
-
-/*  function trayRes() { 
-
-   var obj = {name: "Super", Surname: "Man", age: 23}; 
-
-    var builder = new xml2js.Builder(); 
-    var xml = builder.buildObject(obj); 
-
-   console.log(xml); 
- }  */
-
- /* fetch('https://viacep.com.br/ws/01001000/json/') 
- .then(response => response.json()) 
- .then(result => console.log(result)) 
- .catch(err => console.log(err));  */
