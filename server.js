@@ -54,7 +54,7 @@ const arrayMain6 = [];
 for(let i = 0; i < convertArray2.length; i++) {
 	 var array3 = convertArray2[i].toString().split(',');
 
-	  var volumes = array3[4]++; //quantidade unitaria
+	  var volumes = parseInt(array3[4]); //quantidade unitaria
 	
 	   var sum1 = array3[0] * volumes; //comp
 	   var sum2 = array3[1] * volumes; //lar
