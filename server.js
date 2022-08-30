@@ -92,11 +92,11 @@ for(let i = 0; i < convertArray2.length; i++) {
    "cepOrigem":dadoTray.cep, 
     "cepDestino":dadoTray.cep_destino, 
     "vlrMercadoria":arrayD6, 
-    "peso":arrayD4,"volumes":0, 
+    "peso":arrayD4,"volumes":1, 
     "cubagem":[{"altura":arrayD3, 
     "largura":arrayD2, 
     "comprimento":arrayD1, 
-    "volumes":0}]} 
+    "volumes":1}]} 
           
            var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
             var response = await fetch('https://api.braspress.com/v1/cotacao/calcular/json', { 
