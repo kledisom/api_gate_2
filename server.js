@@ -42,23 +42,48 @@
 
     //var convertArray3 = convertArray2.toString().split(',');
    
+const arrayMain0 = [];
+const arrayMain1 = [];
+const arrayMain2 = [];
+const arrayMain3 = [];
+const arrayMain4 = [];
+const arrayMain5 = [];
+const arrayMain6 = [];
+	 
+	 
 for(let i = 0; i < convertArray2.length; i++) {
 	 var array3 = convertArray2[i].toString().split(',');
 
-	 // var espera = array3;
+	  var volumes = array3[4]++; //quantidade unitaria
+	
+	   var sum1 = array3[0] * volumes; //comp
+	   var sum2 = array3[1] * volumes; //lar
+	   var sum3 = array3[2] * volumes; //alt
+	   var sum4 = array3[5] * volumes; //peso
+	   var sum5 = array3[6] * volumes; // cod do pr
+	   var sum6 = array3[7] * volumes; //valor unitario
 
-	   var sum1 = array3[0] * convertArray2.length;
-	   var sum2 = array3[1] * convertArray2.length;
-	   var sum3 = array3[2] * convertArray2.length;
-	   var sum4 = array3[3] * convertArray2.length;
-	   var sum5 = array3[4] * convertArray2.length;
-	   var sum6 = array3[5] * convertArray2.length;
-	   var sum7 = array3[6] * convertArray2.length;
-
-	    console.log(sum1.toFixed(2));
+	//Armazenar dados em um array externo
+		arrayMain0.push(volumes);
+		arrayMain1.push(sum1);	  
+		arrayMain2.push(sum2);	 
+		arrayMain3.push(sum3);	 
+		arrayMain4.push(sum4);	 
+		arrayMain5.push(sum5);	 
+		arrayMain6.push(sum6);	 
 	
   }
 	 
+		var arrayD0 = arrayMain0.reduce((total, num) => total + num, 0);
+		var arrayD1 = arrayMain1.reduce((total, num) => total + num, 0);
+		var arrayD2 = arrayMain2.reduce((total, num) => total + num, 0);
+		var arrayD3 = arrayMain3.reduce((total, num) => total + num, 0);
+		var arrayD4 = arrayMain4.reduce((total, num) => total + num, 0);
+		var arrayD5 = arrayMain5.reduce((total, num) => total + num, 0);
+		var arrayD6 = arrayMain6.reduce((total, num) => total + num, 0);
+	  	 
+	 
+ 
 //requisição a api da braspress
 
    let data = {"cnpjRemetente":42718567000148, 
@@ -66,12 +91,12 @@ for(let i = 0; i < convertArray2.length; i++) {
    "modal":"R","tipoFrete":"1", 
    "cepOrigem":dadoTray.cep, 
     "cepDestino":dadoTray.cep_destino, 
-    "vlrMercadoria":sum7, 
-    "peso":sum5,"volumes":sum4, 
-    "cubagem":[{"altura":sum2, 
-    "largura":sum3, 
-    "comprimento":sum1, 
-    "volumes":sum4}]} 
+    "vlrMercadoria":arrayD6, 
+    "peso":arrayD4,"volumes":arrayD0, 
+    "cubagem":[{"altura":arrayD3, 
+    "largura":arrayD2, 
+    "comprimento":arrayD1, 
+    "volumes":arrayD0}]} 
           
            var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
             var response = await fetch('https://api.braspress.com/v1/cotacao/calcular/json', { 
