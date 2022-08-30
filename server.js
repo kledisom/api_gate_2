@@ -56,12 +56,12 @@ for(let i = 0; i < convertArray2.length; i++) {
 
 	  var volumes = parseInt(array3[4]); //quantidade unitaria
 	
-	   var sum1 = array3[0]; //comp
-	   var sum2 = array3[1]; //lar
-	   var sum3 = array3[2]; //alt
-	   var sum4 = array3[5]; //peso
-	   var sum5 = array3[6]; // cod do pr
-	   var sum6 = array3[7]; //valor unitario
+	   var sum1 = array3[0]; * volumes;//comp
+	   var sum2 = array3[1]; * volumes;//lar
+	   var sum3 = array3[2]; * volumes;//alt
+	   var sum4 = array3[5]; * volumes;//peso
+	   var sum5 = array3[6]; * volumes;// cod do pr
+	   var sum6 = array3[7]; * volumes;//valor unitario
 
 	//Armazenar dados em um array externo
 		arrayMain0.push(volumes);
