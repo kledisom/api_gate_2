@@ -35,11 +35,14 @@
 
 //tratamento da cubagem
     const str = dadoTray.prods;
-   // var sub = await str.replace(/,/g, ".");
-    var convertArray =  str.split(";")
-    //var convertArray = Array.from(arr); 
-  
-   //console.log(convertArray);
+
+    var convertArray1 =  str.split(";");
+
+    var convertArray2 = convertArray1.toString().split('/');
+
+    var convertArray3 = convertArray2.toString().split(',');
+   
+   console.log(convertArray3);
 
 //requisição a api da braspress
 
@@ -48,12 +51,12 @@
    "modal":"R","tipoFrete":"1", 
    "cepOrigem":dadoTray.cep, 
     "cepDestino":dadoTray.cep_destino, 
-    "vlrMercadoria":convertArray[7], 
-    "peso":convertArray[5],"volumes":convertArray[4], 
-    "cubagem":[{"altura":convertArray[2], 
-    "largura":convertArray[1], 
-    "comprimento":convertArray[0], 
-    "volumes":convertArray[4]}]} 
+    "vlrMercadoria":convertArray3[7], 
+    "peso":convertArray3[5],"volumes":convertArray3[4], 
+    "cubagem":[{"altura":convertArray3[2], 
+    "largura":convertArray3[1], 
+    "comprimento":convertArray3[0], 
+    "volumes":convertArray3[4]}]} 
           
            var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
             var response = await fetch('https://api.braspress.com/v1/cotacao/calcular/json', { 
