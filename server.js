@@ -84,7 +84,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 		var arrayD1 = arrayMain1.reduce((total, num) => total + num, 0);
 		var arrayD2 = arrayMain2.reduce((total, num) => total + num, 0);
 		var arrayD3 = arrayMain3.reduce((total, num) => total + num, 0);
-		var arrayD4 = arrayMain4.reduce((total, num) => total + num, 0);
+		var arrayD4 = arrayMain4.reduce((total, num) => total + num, 0) * 202;
 		var arrayD5 = arrayMain5.reduce((total, num) => total + num, 0);
 		var arrayD6 = arrayMain6.reduce((total, num) => total + num, 0);
 	  	 
