@@ -24,7 +24,7 @@
    res.send(status) 
  }); 
 
- app.post('/user', async (req, res) => {
+ app.get('/user', async (req, res) => {
 
 //## Consulta a api da braspress;
     var dadoTray = {
