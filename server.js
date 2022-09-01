@@ -129,7 +129,7 @@ for(let i = 0; i < convertArray2.length; i++) {
                 "servico": "",
                 "transporte": "TERRESTRE",
                 "valor": totalFrete,
-                "peso": 5.334,
+                "peso": 12.6,
                 "prazo_min": prazo,
                 "prazo_max": prazo,
                 "imagem_frete": "https://www.braspress.com/wp-content/themes/braspress/img/braspress-logo.png",
