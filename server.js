@@ -55,6 +55,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 	 var array3 = convertArray2[i].toString().split(',');
 
 	  var volumes = parseInt(array3[4]); //quantidade unitaria
+	  var cubo = parseFloat(espera[3]); // peso cubado 
 	
 	   var sum1 = parseFloat(array3[0]);//comp
 	   var sum2 = parseFloat(array3[1]);//lar
@@ -68,7 +69,11 @@ for(let i = 0; i < convertArray2.length; i++) {
 		arrayMain1.push(sum1);	  
 		arrayMain2.push(sum2);	 
 		arrayMain3.push(sum3);	 
-		arrayMain4.push(sum4);	 
+		if(sum4 > cubo) {
+		 arrayMain4.push(sum4);
+		} else {
+		 arrayMain4.push(cubo);
+		}	 
 		arrayMain5.push(sum5);	 
 		arrayMain6.push(sum6);	 
 	
