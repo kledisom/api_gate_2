@@ -98,7 +98,7 @@ for(let i = 0; i < convertArray2.length; i++) {
    "cepOrigem":dadoTray.cep, 
     "cepDestino":dadoTray.cep_destino, 
     "vlrMercadoria":arrayD6, 
-    "peso":arrayD4,"volumes":1, 
+    "peso":12.6,"volumes":1, 
     "cubagem":[{"altura":arrayD3, 
     "largura":arrayD2, 
     "comprimento":arrayD1, 
