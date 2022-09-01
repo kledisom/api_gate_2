@@ -125,7 +125,7 @@ for(let i = 0; i < convertArray2.length; i++) {
               "resultado": {
                 "codigo": id,
                 "transportadora": "BRASPRESS",
-                "servico": "",
+                "servico": dadoTray,
                 "transporte": "TERRESTRE",
                 "valor": totalFrete,
                 "peso": 5.334,
