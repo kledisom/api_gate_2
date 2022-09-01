@@ -32,7 +32,7 @@
         cep_destino: req.query.cep_destino,
         prods: req.query.prods,
     }
-
+console.log(dadoTray);
 //tratamento da cubagem
     const str = dadoTray.prods;
 
