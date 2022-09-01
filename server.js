@@ -55,7 +55,8 @@ for(let i = 0; i < convertArray2.length; i++) {
 	 var array3 = convertArray2[i].toString().split(',');
 
 	  var volumes = parseInt(array3[4]); //quantidade unitaria
-	  var cubado = parseFloat(array3[3]); // peso cubado 
+	  var cubo = volumes * parseFloat(array3[3]);
+	  var cubado = await cubo; // peso cubado 
 	  
 	
 	   var sum1 = parseFloat(array3[0]);//comp
@@ -84,7 +85,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 		var arrayD1 = arrayMain1.reduce((total, num) => total + num, 0);
 		var arrayD2 = arrayMain2.reduce((total, num) => total + num, 0);
 		var arrayD3 = arrayMain3.reduce((total, num) => total + num, 0);
-		var arrayD4 = arrayMain4.reduce((total, num) => total + num, 0)+5000;
+		var arrayD4 = arrayMain4.reduce((total, num) => total + num, 0);
 		var arrayD5 = arrayMain5.reduce((total, num) => total + num, 0);
 		var arrayD6 = arrayMain6.reduce((total, num) => total + num, 0);
 	  	 
