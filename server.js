@@ -96,7 +96,7 @@ for(let i = 0; i < convertArray2.length; i++) {
    "cnpjDestinatario":42718567000148, 
    "modal":"R","tipoFrete":"1", 
    "cepOrigem":dadoTray.cep, 
-    "cepDestino":dadoTray.cep_destino, 
+    "cepDestino":57200000, 
     "vlrMercadoria":arrayD6, 
     "peso":12.6,"volumes":1, 
     "cubagem":[{"altura":arrayD3, 
