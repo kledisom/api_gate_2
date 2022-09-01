@@ -32,7 +32,7 @@
         cep_destino: req.query.cep_destino,
         prods: req.query.prods,
     }
-console.log(dadoTray);
+
 //tratamento da cubagem
     const str = dadoTray.prods;
 
@@ -125,7 +125,7 @@ for(let i = 0; i < convertArray2.length; i++) {
               "resultado": {
                 "codigo": id,
                 "transportadora": "BRASPRESS",
-                "servico": dadoTray,
+                "servico": "",
                 "transporte": "TERRESTRE",
                 "valor": totalFrete,
                 "peso": 5.334,
