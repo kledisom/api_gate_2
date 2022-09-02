@@ -27,12 +27,13 @@
  app.get('/user', async (req, res) => {
 
 //## Consulta a api da braspress;
+try {
     var dadoTray = {
         cep: req.query.cep,
         cep_destino: req.query.cep_destino,
         prods: req.query.prods,
     }
-
+console.log(dadoTray.prods);
 //tratamento da cubagem
     const str = dadoTray.prods;
 
@@ -55,7 +56,8 @@ for(let i = 0; i < convertArray2.length; i++) {
 	 var array3 = convertArray2[i].toString().split(',');
 
 	  var volumes = parseInt(array3[4]); //quantidade unitaria
-	  var cubado = volumes * parseFloat(array3[3]);
+    var resultFator = parseFloat(array3[3]) * 1000000;
+	  var cubado = resultFator * volumes; // peso cubado 
 	  
 	
 	   var sum1 = parseFloat(array3[0]);//comp
@@ -129,7 +131,7 @@ for(let i = 0; i < convertArray2.length; i++) {
                 "servico": "",
                 "transporte": "TERRESTRE",
                 "valor": totalFrete,
-                "peso": 12.6,
+                "peso": arrayD4,
                 "prazo_min": prazo,
                 "prazo_max": prazo,
                 "imagem_frete": "https://www.braspress.com/wp-content/themes/braspress/img/braspress-logo.png",
@@ -148,7 +150,10 @@ for(let i = 0; i < convertArray2.length; i++) {
     
         res.set('Content-Type', 'text/xml');
 
-     return res.send(xml);   
+     return res.send(xml); 
+    } catch(err) {
+      return res.status(400).json(err);
+    }
 
  }) 
 
