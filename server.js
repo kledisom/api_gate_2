@@ -152,7 +152,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 
      return res.send(xml); 
     } catch(err) {
-      return res.status(400).json(err);
+      return res.status(400).json('erro interno');
     }
 
  }) 
