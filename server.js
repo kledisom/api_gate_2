@@ -102,9 +102,9 @@ for(let i = 0; i < convertArray2.length; i++) {
     "cepDestino":dadoTray.cep_destino, 
     "vlrMercadoria":arrayD6, 
     "peso":arrayD4,"volumes":1, 
-    "cubagem":[{"altura": arrayD3, //arrayD3
-    "largura": arrayD2,  //arrayD2
-    "comprimento": arrayD1,  //arrayD1
+    "cubagem":[{"altura": 0, //arrayD3
+    "largura": 0,  //arrayD2
+    "comprimento": 0,  //arrayD1
     "volumes":1}]} 
           
            var authorizationBasic = 'Y2xpZW50ZTpjbGllbnRl'; 
