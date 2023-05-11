@@ -91,7 +91,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 		var arrayD5 = arrayMain5.reduce((total, num) => total + num, 0);
 		var arrayD6 = arrayMain6.reduce((total, num) => total + num, 0);
 	  	 
-	 
+	 console.log(arrayD4);
  
 //requisição a api da braspress
 
