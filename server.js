@@ -59,7 +59,7 @@ for(let i = 0; i < convertArray2.length; i++) {
           var resultFator = parseFloat(array3[3]) * 1000000;
 	  var resultFator2 = resultFator / 3333;
 	  var cubado = resultFator2 * volumes; // peso cubado 
-	  
+	  console.log("pesocubado: ", {"volumes": volumes, "resultFator": resultFator, "resultFator2": resultFator2, "cubado": cubado});
 	
 	   var sum1 = parseFloat(array3[0]);//comp
 	   var sum2 = parseFloat(array3[1]);//lar
@@ -67,6 +67,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 	   var sum4 = parseFloat(array3[5]) * volumes;//peso
 	   var sum5 = parseFloat(array3[6]);// cod do pr
 	   var sum6 = parseFloat(array3[7]) * volumes;//valor unitario
+	console.log('sum4: ',arrayD4);
 
 	//Armazenar dados em um array externo
 		arrayMain0.push(volumes);
@@ -92,6 +93,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 		var arrayD6 = arrayMain6.reduce((total, num) => total + num, 0);
 	  	 
 	 console.log(arrayD4);
+	
  
 //requisição a api da braspress
 
