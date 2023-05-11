@@ -67,7 +67,7 @@ for(let i = 0; i < convertArray2.length; i++) {
 	   var sum4 = parseFloat(array3[5]) * volumes;//peso
 	   var sum5 = parseFloat(array3[6]);// cod do pr
 	   var sum6 = parseFloat(array3[7]) * volumes;//valor unitario
-	console.log('sum4: ',arrayD4);
+	console.log('sum4: ',sum4);
 
 	//Armazenar dados em um array externo
 		arrayMain0.push(volumes);
